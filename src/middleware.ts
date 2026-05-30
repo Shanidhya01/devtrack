@@ -1,6 +1,8 @@
 import { getToken } from "next-auth/jwt";
 import { NextRequest, NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+
 const isDev = process.env.NODE_ENV === "development";
 const WINDOW_SECONDS = 60;
 

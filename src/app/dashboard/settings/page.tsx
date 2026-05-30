@@ -659,6 +659,7 @@ function SettingsPageContent() {
                 <input
                   type="checkbox"
                   checked={settings.is_public}
+                  aria-label="Toggle Public Profile"
                   onChange={(e) => handleTogglePublic(e.target.checked)}
                   disabled={saving}
                   className="sr-only"
@@ -858,6 +859,7 @@ function SettingsPageContent() {
                 <input
                   type="checkbox"
                   checked={settings.leaderboard_opt_in}
+                  aria-label="Toggle Public Leaderboard"
                   onChange={(e) => handleToggleLeaderboard(e.target.checked)}
                   disabled={saving}
                   className="sr-only"
@@ -1031,6 +1033,7 @@ function SettingsPageContent() {
                 <input
                   type="checkbox"
                   checked={settings.weekly_digest_opt_in}
+                  aria-label="Toggle Weekly Email Digest"
                   onChange={(e) => handleToggleWeeklyDigest(e.target.checked)}
                   disabled={saving}
                   className="sr-only"
