@@ -140,6 +140,12 @@ export function useGoalTracker() {
     setCreating(true);
     setCreateError(null);
 
+    if (target <= 0) {
+      setCreateError("Target must be greater than 0.");
+      setCreating(false);
+      return;
+    }
+
     try {
       const result = await submitGoalWithRefresh({
         payload: { title, target, unit, recurrence, deadline: deadline || null },
