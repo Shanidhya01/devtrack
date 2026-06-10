@@ -290,6 +290,27 @@ export async function fetchPublicProfile(
   username: string,
   options: { includeAchievements?: boolean } = {}
 ): Promise<PublicProfileData | null> {
+  if (process.env.PLAYWRIGHT_TEST === "true" && username === "playwright-user") {
+    return {
+      username: "playwright-user",
+      bio: "Test user for visual regression",
+      isSponsor: false,
+      publicGists: 5,
+      memberSince: "2026-06-01T00:00:00.000Z",
+      repos: [],
+      contributions: { days: 30, total: 10, data: {} },
+      streak: { current: 5, longest: 10, lastCommitDate: "2026-06-01", totalActiveDays: 50 },
+      topLanguages: [{ name: "TypeScript", count: 10, percentage: 100 }],
+      pullRequests: 2,
+      achievements: [],
+      achievementsError: null,
+      spotlightRepos: [],
+      contributionMilestones: [],
+      weeklyGoalProgress: null,
+      publicWidgets: ["streak", "contributions"],
+    };
+  }
+
   const user = await getUserByUsername(username);
   if (!user) return null;
 

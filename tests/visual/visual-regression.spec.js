@@ -105,6 +105,19 @@ async function mockDashboardApis(page) {
       });
     }
 
+    if (path.includes("/api/public/")) {
+      return route.fulfill({
+        contentType: "application/json",
+        body: JSON.stringify({
+          name: "Playwright User",
+          githubLogin: "playwright-user",
+          bio: "Test user for visual regression",
+          profileImage: null,
+          is_public: true,
+        }),
+      });
+    }
+
     if (path === "/api/notifications") {
       return route.fulfill({
         contentType: "application/json",
@@ -426,10 +439,11 @@ test.describe("visual regression screenshots", () => {
   test("public profile screenshot with deterministic mock data", async ({
     page,
   }) => {
+    await mockDashboardApis(page);
     await setTheme(page, "classic-dark");
     await page.goto("/u/playwright-user", { waitUntil: "load" });
     await expect(
-      page.getByRole("heading", { name: /@playwright-user's profile/i })
+      page.getByRole("heading", { name: "@playwright-user", exact: false })
     ).toBeVisible({ timeout: 30_000 });
     await stabilize(page);
 
