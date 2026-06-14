@@ -105,7 +105,7 @@ export function useGoalTracker() {
     loadGoals()
       .then(async (fetchedGoals) => {
         const needsSync = fetchedGoals.some((g: Goal) => {
-          if (g.unit !== "commits") return false;
+          // auto-sync applies to all goal types
           if (!g.last_synced_at) return true;
           const syncedAt = new Date(g.last_synced_at).getTime();
           return Date.now() - syncedAt > 15 * 60 * 1000;
