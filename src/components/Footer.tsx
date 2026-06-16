@@ -61,7 +61,7 @@ function FooterLink({
 
   if (external) {
     return (
-      
+      <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
@@ -140,7 +140,7 @@ export default function Footer() {
             {/* Social icons */}
             <div className="mt-6 flex items-center gap-3">
               {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
-                
+                <a
                   key={label}
                   href={href}
                   target="_blank"

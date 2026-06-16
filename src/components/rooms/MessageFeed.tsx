@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-// Note: Keeping this import in case other hooks use it, while using auth-helpers client for component scope
-import { supabase as defaultSupabase } from "@/lib/supabase";
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabaseBrowser } from "@/lib/supabase-browser";
 import type { RoomMessage } from '@/types/rooms';
 
 interface Props {
@@ -14,8 +12,7 @@ interface Props {
 }
 
 export default function MessageFeed({ roomId, currentUser, messages, onNewMessages }: Props) {
-  // 🧠 PRIMARY INSTANTIATION: Single client instance scoped to the parent component body
-  const supabase = createClientComponentClient();
+  const supabase = supabaseBrowser;
 
   const bottomRef = useRef<HTMLDivElement>(null);
 

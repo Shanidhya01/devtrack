@@ -151,6 +151,9 @@ export default async function DashboardPage() {
               <h3 className="text-xl font-bold text-[var(--foreground)] leading-tight">
                 Generate an ATS-Friendly CV Backed by Your Real Code
               </h3>
+            </div>
+          </div>
+        </section>
 
           {/* Right: streak + coding time */}
           <div className="flex flex-col gap-6">
@@ -238,7 +241,6 @@ export default async function DashboardPage() {
             </div>
           </div>
         </div>
-        </section>
 
         {/* 4. GOALS & INSIGHTS */}
         <section id="goals" className="mt-14 space-y-6 scroll-mt-28 mb-12">
@@ -254,7 +256,6 @@ export default async function DashboardPage() {
               Build Resume
               <ChevronRight className="h-5 w-5" />
             </Link>
-          </div>
         </section>
         <section className="mt-8">
           <MilestonePlanner />
