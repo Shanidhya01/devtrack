@@ -404,6 +404,9 @@ export async function GET(req: NextRequest) {
     const parts = accountId.split(":");
     targetAccountId = parts[1];
     orgName = parts[2];
+    if (!targetAccountId || !orgName) {
+      return Response.json({ error: "Invalid organization account ID" }, { status: 400 });
+    }
   }
 
   // Load excluded organizations config
