@@ -81,22 +81,25 @@ export function DashboardWidgetA11yProvider({
 export function useDashboardWidgetA11y(widgetId: DashboardWidgetId) {
   const context = useContext(DashboardWidgetA11yContext);
 
+  const setSummaryForWidget = context?.setSummary;
+  const setIsUpdatingForWidget = context?.setIsUpdating;
+
   const setSummary = useCallback(
     (text: string | null) => {
-      if (context) {
-        context.setSummary(widgetId, text);
+      if (setSummaryForWidget) {
+        setSummaryForWidget(widgetId, text);
       }
     },
-    [context, widgetId],
+    [setSummaryForWidget, widgetId],
   );
 
   const setIsUpdating = useCallback(
     (isUpdating: boolean) => {
-      if (context) {
-        context.setIsUpdating(widgetId, isUpdating);
+      if (setIsUpdatingForWidget) {
+        setIsUpdatingForWidget(widgetId, isUpdating);
       }
     },
-    [context, widgetId],
+    [setIsUpdatingForWidget, widgetId],
   );
 
   return { setSummary, setIsUpdating };
