@@ -9,7 +9,6 @@
 [![CI](https://github.com/Umbrella-io/devtrack/actions/workflows/ci.yml/badge.svg)](https://github.com/Umbrella-io/devtrack/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-[![GSSoC 2026](https://img.shields.io/badge/GSSoC-2026-orange.svg)](https://gssoc.girlscript.tech/)
 [![Stack](https://img.shields.io/badge/stack-Next.js%2016%20%7C%20Supabase%20%7C%20TypeScript-blue)](./DEVELOPMENT.md)
 [![Good First Issues](https://img.shields.io/github/issues/Umbrella-io/devtrack/good%20first%20issue?label=good%20first%20issues&color=7c3aed)](https://github.com/Umbrella-io/devtrack/issues?q=label%3A%22good+first+issue%22)
 [![Contributors](https://img.shields.io/github/contributors/Umbrella-io/devtrack?color=brightgreen)](https://github.com/Umbrella-io/devtrack/graphs/contributors)
@@ -30,7 +29,6 @@
 | Forks | 369 |
 | Merged PRs | 800+ |
 | Contributors | 224 |
-| GSSoC 2026 | Active participant |
 
 ---
 
@@ -444,7 +442,7 @@ Want to contribute? Pick an item below and open an issue or start a PR.
 
 ## Contributing
 
-DevTrack actively welcomes contributors of all skill levels, including **GSSoC 2026 participants**.
+DevTrack actively welcomes contributors of all skill levels.
 
 Setup takes under 10 minutes — see [DEVELOPMENT.md](./DEVELOPMENT.md) for the full walkthrough.
 
@@ -476,11 +474,11 @@ DevTrack is built on best-in-class open-source infrastructure. Sponsoring helps 
 
 ## Sponsors
 
-DevTrack is free and open source, built by **224+ contributors** and actively developed as a GSSoC 2026 project. Sponsoring directly funds:
+DevTrack is free and open source, built by **224+ contributors** worldwide. Sponsoring directly funds:
 
 - **Supabase and Vercel infrastructure** — keeping the hosted demo fast and free for every contributor
 - **Groq API costs** — powering AI weekly insights for all users
-- **Maintainer time** — code review, issue triage, GSSoC 2026 mentorship, and release management
+- **Maintainer time** — code review, issue triage, and release management
 
 With **130+ stars**, **369 forks**, **800+ merged PRs**, and **224 contributors**, DevTrack is one of the most active open-source developer-productivity projects on GitHub. Your logo here reaches a highly technical, actively coding audience.
 

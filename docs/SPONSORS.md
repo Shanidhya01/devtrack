@@ -12,7 +12,6 @@ DevTrack is an open-source developer productivity dashboard. It consolidates Git
 | Forks | 369 |
 | Merged PRs | 800+ |
 | Contributors | 224 |
-| GSSoC 2026 | Active participant |
 
 DevTrack is one of the most active open-source developer-productivity projects currently in development. The contributor base is highly technical (Next.js, TypeScript, Supabase, Groq) — exactly the audience your developer tools brand wants to reach.
 
@@ -25,7 +24,7 @@ DevTrack is one of the most active open-source developer-productivity projects c
 | Supabase infrastructure | PostgreSQL database, auth, and Realtime for the hosted demo |
 | Vercel hosting | CI/CD, preview deployments, and production serving |
 | Groq API | AI weekly insights feature for all users |
-| Maintainer time | Code review, GSSoC 2026 mentorship, issue triage, and release management |
+| Maintainer time | Code review, issue triage, and release management |
 
 ---
 
