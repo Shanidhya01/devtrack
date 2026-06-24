@@ -190,7 +190,7 @@ describe("calculateStreakFromDates", () => {
     expect(result.longest).toBe(3);
   });
 
-  it("does not treat Feb 28 → Mar 1 as consecutive in a non-leap year (2025)", () => {
+  it("treats Feb 28 → Mar 1 as consecutive in a non-leap year (28-day February)", () => {
     const result = calculateStreakFromDates(
       days("2025-02-28", "2025-03-01")
     );
